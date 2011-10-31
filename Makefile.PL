@@ -30,7 +30,7 @@ my %WriteMakefileArgs = (
     'Net::ZooKeeper' => '0',
     'Params::Validate' => '0'
   },
-  'VERSION' => '0.01',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t'
   }

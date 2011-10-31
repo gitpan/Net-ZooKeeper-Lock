@@ -1,6 +1,6 @@
 package Net::ZooKeeper::Lock;
 BEGIN {
-  $Net::ZooKeeper::Lock::VERSION = '0.01';
+  $Net::ZooKeeper::Lock::VERSION = '0.02';
 }
 
 use strict;
@@ -54,8 +54,8 @@ sub _create_cyclic_path {
             $current_path = $path;
         }
 
-        if (!$self->{zkh}->exists($path)) {
-            $self->{zkh}->create($path, '0',
+        if (!$self->{zkh}->exists($current_path)) {
+            $self->{zkh}->create($current_path, '0',
                 acl => ZOO_OPEN_ACL_UNSAFE
             );
         }
@@ -151,7 +151,7 @@ Net::ZooKeeper::Lock - distributed locks via ZooKeeper
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -170,7 +170,7 @@ version 0.01
 
 =head1 DESCRIPTION
 
-This module implements distributed locks via ZooKeeper using L<Net::ZooKeper> and ZooKeeper recipe described at L<http://zookeeper.apache.org/doc/trunk/recipes.html#sc_recipes_Locks>. It doesn't implements shared locks, it will appear in the next releases.
+This module implements distributed locks via ZooKeeper using L<Net::ZooKeeper> and ZooKeeper recipe described at L<http://zookeeper.apache.org/doc/trunk/recipes.html#sc_recipes_Locks>. It doesn't implements shared locks, it will appear in the next releases.
 
 =head1 METHODS
 

@@ -24,4 +24,4 @@ requires:
 resources:
   homepage: http://github.com/tadam/Net-ZooKeeper-Lock
   repository: git://github.com/tadam/Net-ZooKeeper-Lock.git
-version: 0.01
+version: 0.02
