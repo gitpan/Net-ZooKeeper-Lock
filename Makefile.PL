@@ -4,35 +4,37 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'distributed locks via ZooKeeper',
-  'AUTHOR' => 'Yury Zavarin <yury.zavarin@gmail.com>',
-  'BUILD_REQUIRES' => {
-    'IO::Handle' => '0',
-    'POSIX' => '0',
-    'Test::Class' => '0',
-    'Test::More' => '0',
-    'Time::HiRes' => '0',
-    'parent' => '0'
+  "ABSTRACT" => "distributed locks via ZooKeeper",
+  "AUTHOR" => "Yury Zavarin <yury.zavarin\@gmail.com>",
+  "BUILD_REQUIRES" => {
+    "IO::Handle" => 0,
+    "POSIX" => 0,
+    "Test::Class" => 0,
+    "Test::More" => 0,
+    "Time::HiRes" => 0,
+    "parent" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Net-ZooKeeper-Lock',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Net::ZooKeeper::Lock',
-  'PREREQ_PM' => {
-    'Net::ZooKeeper' => '0',
-    'Params::Validate' => '0'
+  "DISTNAME" => "Net-ZooKeeper-Lock",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Net::ZooKeeper::Lock",
+  "PREREQ_PM" => {
+    "Net::ZooKeeper" => 0,
+    "Params::Validate" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.02',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.03",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
